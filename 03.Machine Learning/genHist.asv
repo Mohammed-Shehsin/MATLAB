@@ -1,0 +1,19 @@
+function [ outHist ] = genHist( image )
+%GENHIST Generuje histogram dla podanego obrazu.
+% Obraz jest macierza h x w x 3 o wartosciach w zakresie 0 - 255.
+% Wynikowy histogram powinien byc wektorem wierszowym o sta³ej d³ugoœci.
+
+    % Zastap ponizszy kod tak, aby obliczal histogram dla obrazu RGB.
+    % Proszê dobraæ odpowiedni¹ d³ugoœæ wektora outHist.
+    R = image(:,:,1);
+    G = image(:,:,2);
+    B = image(:,:,3);
+    %figure;
+    hR =  hist(double(R(:)),2);
+    hB =  hist(double(B(:)),2);
+    hG =  hist(double(G(:)),2);
+    outHist = 
+
+   % outHist = zeros(1,16);
+end
+
