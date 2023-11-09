@@ -1,0 +1,15 @@
+step = 0.005;
+amplitude = 2.5;
+frequency = 2 ;
+duration = 4 ;
+t = 0 : step :duration ;
+signal = 2.5 * sin( 2  * pi * frequency * t );
+plot(t , signal);
+xlabel("Time");
+ylabel("Amplitude");
+title("Sinsoidal Signal");
+grid on ;
+hold on ;
+standard_deviation = 0.1;
+noice_signal = (standard_deviation * rand(size(t)) + signal)  ;
+plot(t,noice_signal);
